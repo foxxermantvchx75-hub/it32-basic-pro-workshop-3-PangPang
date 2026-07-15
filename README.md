@@ -1,44 +1,49 @@
 # IT Starter Pack #32 / Basic Programming Workshop 3
 
-##  Instructions
+## Instructions
 
 1. Fork repo นี้ไปเป็นของตัวเอง
 2. Clone repo ลงเครื่องของน้อง
-2. เปิด Repo นั้นใน VS Code
-3. สร้างไฟล์ใหม่ขึ้นมา (นามสกุล `.py`) แล้วทำตามโจทย์ได้เลย
-4. ทำเสร็จ ใช้ GitHub Workflows (`add`, `commit`, `push`) เพื่ออัปโหลดงานของตัวเองขึ้น Remote repo
-5. แจ้งพี่ ๆ พร้อม GitHub username ของน้องว่างานของน้องเสร็จแล้ว แล้วพี่ ๆ จะเข้าไป comment งานของน้องผ่านหน้า Issue ใน Repo ของน้องบน GitHub
+3. เปิด Repo นั้นใน VS Code
+4. สร้างไฟล์ใหม่ขึ้นมา ตั้งชื่อว่า `workshop3.py` แล้วทำตามโจทย์ได้เลย
+5. ทำเสร็จ ใช้ GitHub Workflows เพื่ออัปโหลดงานของตัวเองขึ้น Remote repo ดังนี้
 
----
+5.1 add
 
-## Workshop Task: ระบบคำนวณกำไรค้าอาวุธเถื่อน
+```bash
+git add .
+```
 
-![Task details for the workshop](./workshop3.png)
-> แก๊งกำลังช็อตเงิน! บอสสั่งให้พวกแกออกไปเก็บค่าคุ้มครองจากร้านค้าในเขต จงเขียนโปรแกรมคำนวณยอดเงินด้วย Loop ให้ถูกต้อง!
+5.2 commit
 
-### Requirements จากบอส
+```bash
+git commit -m "add workshop 3"
+```
+> [!NOTE]
+> ถ้าน้องเจอ error แบบนี้:
+> ```bash
+> *** Please tell me who you are.
+> 
+> Run
+> 
+>   git config --global user.email "you@example.com"
+>   git config --global user.name "Your Name"
+> 
+> to set your account's default identity.
+> Omit --global to set the identity only in this repository.
+> 
+> fatal: unable to auto-detect email address (got 'username@hostname.(none)')
+> ```
+> แปลว่าน้องยังไม่ได้ config user.name หรือ user.email ซึ่งน้องสามารถ config ได้ดังนี้:
+> ```bash
+> git config --local user.name "<ชื่อของน้อง>"
+> git config --local user.email "<อีเมลของน้อง>"
+> ```
 
-**Menu System**: ให้รับ input() เพื่อให้ผู้ใช้พิมพ์เลือกภารกิจก่อนเริ่มทำงานว่าจะใช้วิธีการเก็บเงินแบบไหน
+5.3 push
 
-1. **แบบที่ 1 “เก็บตามสั่ง” (For Loop)** - รับคำสั่งว่าต้องไปเก็บกี่ร้าน ให้วนรับยอดเงินตามจำนวนร้าน แล้วสรุปยอดรวม
-	- **INPUT**
-		- จำนวนร้านที่จะเก็บ (ร้าน)
-		- จำนวนเงินที่จะเก็บร้านนั้น (บาท)
-	- **OUTPUT**
-		- จำนวนร้านที่เก็บมา (ร้าน)
-		- จำนวนเงินทั้งหมดที่เก็บได้ (บาท)
+```bash
+git push
+```
 
-2. **แบบที่ 2 “เก็บให้ทะลุเป้า” (While Loop)** - ให้วนเก็บเงินทบยอดไปเรื่อย ๆ จนกว่าจะมากกว่าหรือเท่ากับ 50,000 บาท
-	- **INPUT**
-		- จำนวนเงินที่จะเก็บในครั้งนั้น (บาท)
-	- **OUTPUT**
-		- จำนวนร้านที่เก็บมา (ร้าน)
-		- จำนวนเงินทั้งหมดที่เก็บได้ (บาท)
-
-3. **แบบที่ 3 “เก็บไร้ขีดจำกัด” (While True)** - เก็บเงินไปเรื่อย ๆ เพื่อรับยอดเงินทบไปเรื่อย ๆ จนกว่าผู้ใช้จะพิมพ์ “police” เข้ามา ถ้าใช่ให้ break หยุดโปรแกรมทันที และเตือนว่าตำรวจมา
-	- **INPUT**
-		- จำนวนเงินที่จะเก็บในครั้งนั้น (บาท) หรือ “police”
-	- **OUTPUT**
-		- จำนวนร้านที่เก็บมาได้ (ร้าน)
-		- จำนวนเงินทั้งหมดที่เก็บได้ (บาท)
-		- ข้อความเตือน
+6. แจ้งพี่ ๆ พร้อม GitHub username ของน้องว่างานของน้องเสร็จแล้ว แล้วพี่ ๆ จะเข้าไป comment งานของน้องเองงงง
